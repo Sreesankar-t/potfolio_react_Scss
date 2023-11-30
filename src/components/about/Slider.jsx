@@ -4,7 +4,7 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs"
 export const Slider = ({ items, Heading }) => {
   const [data, setData] = useState(items.review)
   const [curSlide, setCurSlide] = useState(0)
-  console.log(setData)
+
 
   const checkIndex = (position) => {
     if (position > data.length - 1) {
@@ -30,7 +30,7 @@ export const Slider = ({ items, Heading }) => {
   return (
     <>
       <div className='about_sider'>
-        <Heading title='What They Says?' />
+        <Heading title='Project' />
 
         <div className='about_sider_content'>
           {data.map((slide, index) => (
@@ -41,9 +41,10 @@ export const Slider = ({ items, Heading }) => {
                     <img src={slide.cover} alt='' />
                   </div>
                   <div className='text'>
-                    <p>{slide.desc}</p>
-                    <h3>{slide.name}</h3>
+                   <h3>{slide.name}</h3>
                     <label>{slide.link}</label>
+                    <p>{slide.desc}</p>
+                    <a href="https://github.com/Sreesankar-t"> <label>{slide.sourceCode}</label></a>
                   </div>
                 </div>
               )}

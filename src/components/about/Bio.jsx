@@ -1,5 +1,5 @@
 import React from "react"
-
+import {Link} from 'react-router-dom'
 export const Bio = ({ items, Heading }) => {
   return (
     <>
@@ -18,7 +18,18 @@ export const Bio = ({ items, Heading }) => {
                 <p>{val.para3}</p>
               </div>
               <div className='about_details_bio_box_item'>
-                <img src={val.images} alt='' />
+              <p>CartWise Online platform - source code:</p>
+              <a href="https://github.com/Sreesankar-t/CartWase-ecommerce.git" target="_blank" rel="noopener noreferrer">
+              <p style={{color:"lightblue"}}>https://github.com/Sreesankar-t/CartWase-ecommerce.git</p>
+              </a>
+
+              
+              <p>WONDERINN hotelbooking application - source code:</p>
+              <a href="https://github.com/Sreesankar-t/BOOKING_app-MERN.git" target="_blank" rel="noopener noreferrer">
+              
+               <p style={{color:"lightblue"}}>https://github.com/Sreesankar-t/BOOKING_app-MERN.git</p>
+              </a>
+           
               </div>
             </div>
           </>

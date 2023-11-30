@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import { menu } from "../data/data"
-import { RiMenu3Line } from "react-icons/ri"
-import { AiOutlineClose } from "react-icons/ai"
+
+import { RiMenu3Line, RiUserLine } from "react-icons/ri"
+import { AiOutlineClose, AiOutlineHome } from "react-icons/ai"
 
 export const Header = () => {
   const [mobile, setMobile] = useState(false)
@@ -11,14 +11,20 @@ export const Header = () => {
     <>
       <header>
         <ul className={`${mobile ? "mobile-nav" : "menu"}`}>
-          {menu.map((item) => (
-            <li key={item.id}>
-              <Link to={item.url} onClick={handleActive} className='link'>
-                {item.text}
+         
+            <li >
+              <Link to="/" onClick={handleActive} className='link'>
+               Home
               </Link>
-              <span>{item.icon}</span>
+              <span><AiOutlineHome /></span>
             </li>
-          ))}
+            <li >
+              <Link to="/resume" onClick={handleActive} className='link'>
+               Resume
+              </Link>
+              <span><RiUserLine/></span>
+            </li>
+         
         </ul>
         <div className='icons'>
           <button onClick={() => setMobile(!mobile)}>{mobile ? <AiOutlineClose /> : <RiMenu3Line />}</button>
